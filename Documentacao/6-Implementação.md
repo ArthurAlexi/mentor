@@ -1,3 +1,4 @@
+[tecnonologias.pdf](https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7924100-criptomoeda-1-1/files/7255114/tecnonologias.pdf)
 # Projeto da Solução
 
 <span style="color:red">Pré-requisitos: <a href="4-Gestão-Configuração.md"> Ambiente e Ferramentas de Trabalho</a></span>
