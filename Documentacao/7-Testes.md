@@ -1,3 +1,5 @@
+[Avaliação dos testes.pdf](https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7924100-criptomoeda-1-1/files/7254331/Avaliacao.dos.testes.pdf)
+[Anotações_entrevistas.pdf](https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7924100-criptomoeda-1-1/files/7254333/Anotacoes_entrevistas.pdf)
 # Avaliação da Aplicação
 
 <span style="color:red">Pré-requisitos: <a href="6-Implementação.md"> Projeto da Solução</a></span>
