@@ -2,9 +2,9 @@
 # Nome do projeto: Mentor
 
   O objetivo da aplicação é auxiliar o investidor, seja ele inexperiente ou não, no(a): 
-    º Apredizagem do Mercado de Criptomoedas;
-    º Escolha da criptomoeda na hora de investir o dinheiro.
-    º Acompanhamento do Mercado de criptomoedas e dos ativos investidos.
+    * Apredizagem do Mercado de Criptomoedas;
+    * Escolha da criptomoeda na hora de investir o dinheiro.
+    * Acompanhamento do Mercado de criptomoedas e dos ativos investidos.
 
 ## Alunos integrantes da equipe
 
