@@ -1,3 +1,4 @@
+[Gerenciamento_De_Projeto.pdf](https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7924100-criptomoeda-1-1/files/7255277/Gerenciamento_De_Projeto.pdf)
 # Gerenciamento de Projeto
 
 > Descreva aqui a metodologia de trabalho do grupo para atacar o
