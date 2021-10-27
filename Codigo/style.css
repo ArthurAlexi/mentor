@@ -1,0 +1,53 @@
+html,
+body {
+    height: 100%;
+}
+
+:root {
+    --main-color: #48176d;
+    --secondary-color: #ff6b00;
+    --third-color: #006cfb;
+}
+
+body {
+    background-color: hsl(0, 0%, 97%) !important;
+}
+
+.row {
+    background-color: hsl(220, 70%, 100%);
+    margin: 3rem auto;
+    padding: 2rem !important;
+    border-radius: 0.25rem;
+}
+
+.asset-brand {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.asset-icon {
+    max-height: 1.75rem;
+    margin-right: 0.75rem;
+}
+
+.asset-rank {
+    background-color: var(--main-color);
+    color: #fff;
+    margin-left: 0.5rem;
+}
+
+.asset-price {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#tradingview_b09eb > div {
+    height: 30rem !important;
+}
