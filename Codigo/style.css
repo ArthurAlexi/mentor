@@ -7,17 +7,109 @@ body {
     --main-color: #48176d;
     --secondary-color: #ff6b00;
     --third-color: #006cfb;
+    --gray-color: #f4f4f4;
+    --text-color-light: #303030;
+    --text-color-dark: #fff;
 }
 
 body {
     background-color: hsl(0, 0%, 97%) !important;
+    color: var(--text-color-light);
+}
+
+a {
+    color: var(--text-color-light);
+}
+a:hover {
+    color: var(--main-color);
+}
+
+.navbar {
+    height: 7rem;
+    background-color: #fff;
+    padding-top: 0 !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar > .container {
+    justify-content: space-evenly !important;
+}
+
+.search {
+    display: flex;
+    justify-content: space-around;
+}
+
+.search-field {
+    width: 31.25rem;
+}
+
+.search-field input {
+    background-color: var(--gray-color);
+    border: none;
+    border-radius: 1.25rem;
+    padding-top: 0.625rem !important;
+    padding-bottom: 0.625rem !important;
+    padding-left: 1.75rem !important;
+}
+
+.search-field input:focus {
+    background-color: hsl(0, 0%, 90%);
+    box-shadow: none;
+}
+
+.search-field input::placeholder {
+    color: #000;
+    font-size: 0.875rem;
+}
+
+.search-field span {
+    background-color: var(--gray-color);
+    border: none;
+    border-radius: 1.25rem;
+    padding: 0.625rem 1.75rem !important;
+}
+
+.actions-right-header {
+    display: flex;
+    align-items: center;
+    margin-left: 1.25rem;
+}
+
+.user-buttons {
+    display: flex;
+    width: 4.375rem;
+    justify-content: space-between;
+}
+
+.user-buttons .bi {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.hello-message {
+    margin-left: 2.5rem;
+    width: max-content;
+    margin-right: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hello-message .user-name {
+    color: var(--main-color);
+}
+
+.user-avatar {
+    border: 3px solid var(--main-color);
+    border-radius: 3rem;
+    padding: 1px;
 }
 
 .row {
     background-color: hsl(220, 70%, 100%);
     margin: 3rem auto;
-    padding: 2rem !important;
-    border-radius: 0.25rem;
+    padding: 2rem 2.875rem !important;
+    border-radius: 0.5rem;
 }
 
 .asset-brand {
@@ -33,7 +125,7 @@ body {
 
 .asset-rank {
     background-color: var(--main-color);
-    color: #fff;
+    color: var(--text-color-dark);
     margin-left: 0.5rem;
 }
 
@@ -43,11 +135,18 @@ body {
 }
 
 .section-title {
-    font-size: 1.5rem;
+    font-size: 0.875rem;
     font-weight: 500;
+    text-transform: uppercase;
     margin-bottom: 1rem;
 }
 
 #tradingview_b09eb > div {
     height: 30rem !important;
+}
+
+@media screen and (max-width: 991px) {
+    .actions-right-header {
+        display: none;
+    }
 }

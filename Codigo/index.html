@@ -5,10 +5,12 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title></title>
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="shortcut icon"
+            href="assets/images/icon-mentor.svg"
+            type="image/x-icon"
+        />
+        <title>siteTitle</title>
 
         <!-- Bootstrap CSS -->
         <link
@@ -17,24 +19,93 @@
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossorigin="anonymous"
         />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
+        />
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-        <header></header>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img
+                            src="assets/images/logo-mentor.svg"
+                            alt="Logo"
+                            height="40"
+                        />
+                    </a>
+                    <form class="container-fluid search">
+                        <div class="input-group search-field">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Busque uma criptomoeda ou token..."
+                                aria-label="Username"
+                                aria-describedby="basic-addon1"
+                            />
+                            <span
+                                class="input-group-text search-icon"
+                                id="basic-addon1"
+                                ><i class="bi bi-search"></i
+                            ></span>
+                        </div>
+                    </form>
+                    <div class="actions-right-header">
+                        <div class="user-buttons">
+                            <a href="#"><i class="bi bi-heart"></i></a
+                            ><a href="#"><i class="bi bi-bell"></i></a>
+                        </div>
+                        <div class="hello-message">
+                            Olá, <span class="user-name">Hesdras!</span>
+                        </div>
+                        <img
+                            class="user-avatar"
+                            src="assets/images/icon-avatar.png"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </nav>
+        </header>
 
         <main class="app">
+            <!-- Assets List -->
+            <section class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">Trending</div>
+                        <span><a id="btcBtn" href="#">Bitcoin</a></span>
+                        <span>|</span>
+                        <span><a id="axsBtn" href="#">Axie Infinity</a></span>
+                        <span>|</span>
+                        <span><a id="maticBtn" href="#">Polygon</a></span>
+                    </div>
+                </div>
+            </section>
+
             <!-- Asset Details -->
             <section class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="asset-brand">
                             <img class="asset-icon" />
-                            <h1 class="asset-name"></h1>
-                            <span class="asset-rank badge"></span>
+                            <h1 class="asset-name">assetName</h1>
+                            <span class="asset-rank badge">assetRank</span>
                         </div>
                         <div class="asset-price">assetPrice</div>
-                        <div class="asset-volume">assetVolume</div>
+                        <div class="asset-high24h">assetHigh24h</div>
+                        <div class="asset-low24h">assetLow24h</div>
                         <div class="asset-marketcap">assetMarketCap</div>
-                        <div class="asset-exchanges">assetExchanges</div>
+                        <div class="asset-volume">assetVolume</div>
                     </div>
                 </div>
             </section>
@@ -51,21 +122,35 @@
                                 src="https://s3.tradingview.com/tv.js"
                             ></script>
                             <script type="text/javascript">
-                                new TradingView.widget({
-                                    autosize: true,
-                                    symbol: 'BINANCE:BTCBRL',
-                                    timezone: 'America/Sao_Paulo',
-                                    theme: 'light',
-                                    style: '3',
-                                    locale: 'br',
-                                    toolbar_bg: '#f1f3f6',
-                                    enable_publishing: false,
-                                    hide_top_toolbar: true,
-                                    hide_legend: true,
-                                    withdateranges: true,
-                                    save_image: false,
-                                    container_id: 'tradingview_b09eb'
-                                })
+                                function getChart(ticker) {
+                                    new TradingView.widget({
+                                        autosize: true,
+                                        symbol: `BINANCE:${ticker}BRL`,
+                                        timezone: 'America/Sao_Paulo',
+                                        theme: 'light',
+                                        style: '3',
+                                        locale: 'br',
+                                        toolbar_bg: '#f1f3f6',
+                                        enable_publishing: false,
+                                        hide_top_toolbar: true,
+                                        hide_legend: true,
+                                        withdateranges: true,
+                                        save_image: false,
+                                        container_id: 'tradingview_b09eb'
+                                    })
+                                }
+                                btcBtn.onclick = () => {
+                                    getAPIData(0)
+                                    getChart('BTC')
+                                }
+                                axsBtn.onclick = () => {
+                                    getAPIData(22)
+                                    getChart('AXS')
+                                }
+                                maticBtn.onclick = () => {
+                                    getAPIData(18)
+                                    getChart('MATIC')
+                                }
                             </script>
                         </div>
                     </div>
@@ -76,7 +161,12 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="section-title">Perfil</div>
-                        <div class="asset-history"></div>
+                        <div class="asset-ath">assetAth</div>
+                        <div class="asset-atl">assetAtl</div>
+                        <div class="asset-total-supply">assetTotalSupply</div>
+                        <div class="asset-circulating-supply">
+                            circulatingSupply
+                        </div>
                     </div>
                 </div>
             </section>
