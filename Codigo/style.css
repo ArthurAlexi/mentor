@@ -19,6 +19,7 @@ body {
 
 a {
     color: var(--text-color-light);
+    text-decoration: none;
 }
 a:hover {
     color: var(--main-color);
