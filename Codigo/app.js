@@ -47,7 +47,7 @@ function getAPIData(assetPos) {
             assetPrice.innerHTML = formatCurrency.format(
                 data[assetPos].current_price
             )
-            assetMarketcap.innerHTML = `${'<strong>Cap. de mercado:</strong>'} ${formatCurrency.format(
+            assetMarketcap.innerHTML = `${'<strong>Capitalização de mercado:</strong>'} ${formatCurrency.format(
                 data[assetPos].market_cap
             )}`
             assetVolume.innerHTML = `${'<strong>Volume (24h):</strong>'} ${formatCurrency.format(
