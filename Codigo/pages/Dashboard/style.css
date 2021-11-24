@@ -1,0 +1,16 @@
+.graph {
+    padding: 2rem 10rem;
+}
+.graph img {
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .graph {
+        padding: 1rem;
+    }
+}
+
+.section-icon {
+    margin-left: 0.5rem;
+}

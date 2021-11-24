@@ -1,0 +1,16 @@
+.login-canvas {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.modal-content {
+    padding: 3rem;
+}
+
+.modal-footer {
+    padding: 0.75rem 0;
+}
+.modal-footer > * {
+    margin: 0 rem;
+}

@@ -7,9 +7,12 @@ body {
     --main-color: #48176d;
     --secondary-color: #ff6b00;
     --third-color: #006cfb;
+    --main-color-dark: #260d3a;
     --gray-color: #f4f4f4;
+    --dark-gray-color: #cccccc;
     --text-color-light: #303030;
     --text-color-dark: #fff;
+    --white-background: #fff;
 }
 
 body {
@@ -23,6 +26,60 @@ a {
 }
 a:hover {
     color: var(--main-color);
+}
+
+.root main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--main-color);
+    height: 100vh;
+}
+.primary-button {
+    color: #ffffff;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.5s;
+    width: 100%;
+}
+.primary-button:hover {
+    background-color: var(--main-color-dark);
+    color: var(--text-color-dark);
+}
+.secondary-button {
+    color: var(--text-color-light);
+    background-color: var(--white-background);
+    border: 2px solid var(--text-color-light);
+    border-radius: 0.4rem;
+    margin: 1rem 0;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+.secondary-button:hover {
+    background-color: var(--main-color);
+    color: var(--white-background);
+    border-color: var(--main-color);
+}
+.white-button {
+    color: var(--text-color-light);
+    background-color: var(--white-background);
+    border: none;
+    border-radius: 0.4rem;
+    margin: 1rem 0;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+.white-button:hover {
+    background-color: var(--gray-color);
+    color: var(--text-color-light);
 }
 
 .navbar {
@@ -106,6 +163,15 @@ a:hover {
     padding: 1px;
 }
 
+.dropdown-menu.account.show {
+    animation: all 0.5s;
+    left: auto;
+    margin-top: 1rem;
+    right: 0;
+    border: none;
+    box-shadow: 2px 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
 .row {
     background-color: hsl(220, 70%, 100%);
     margin: 3rem auto;
@@ -144,6 +210,10 @@ a:hover {
 
 #tradingview_b09eb > div {
     height: 30rem !important;
+}
+
+#feedbackMessage {
+    display: none;
 }
 
 @media screen and (max-width: 991px) {
