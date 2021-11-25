@@ -5,7 +5,13 @@ function start() {
 
 }
 
-
+function valorCotacao(){
+    //API COM AS COTAÇÕES DAS MOEDAS
+    var xhr = new XMLHttpRequest();
+    xhr.onload = trataCambio;
+    xhr.open('GET','https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,USD-EUR');
+    xhr.send(); 
+}
 
 function trataCambio(valor, moeda) {
 
