@@ -1,25 +1,37 @@
 function start() {
+    getAPIData()// chama API
     listaCriptos();// monta a tabela com os criptos
     calculaPatrimonio(); //soma os valores de compra para ter o patrimonio
     desenhaGrafico(); // desenha grafico_cripto
 
 }
 
-function valorCotacao(){
+// valores relativos das moedas:
+let dolar = 5.6;
+let euro = 6.4;
+let usdeur = 0.8;
+let eurusd = 1.13;
+
+function getAPIData() {
+        
     //API COM AS COTAÇÕES DAS MOEDAS
     var xhr = new XMLHttpRequest();
-    xhr.onload = trataCambio;
-    xhr.open('GET','https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,USD-EUR');
+    xhr.onload = valoresCotacao;
+    xhr.open('GET','https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,USD-EUR,EUR-USD');
     xhr.send(); 
+}
+
+function valoresCotacao() {
+    let dados = JSON.parse((this.responseText));
+    dolar = parseFloat(dados.USDBRL.high);
+    euro = parseFloat(dados.EURBRL.high);
+    usdeur = parseFloat(dados.USDEUR.high);
+    eurusd = parseFloat(dados.EURUSD.high);
 }
 
 function trataCambio(valor, moeda) {
 
-    // valores das moedas em relação ao real
-    let dolar = 5.6;
-    let euro = 6.4;
-    let real = 1;
-
+    getAPIData();
     //Obtem a moeda que o usuário deseja:
     let cambio = document.getElementById('cambio').value;
 
