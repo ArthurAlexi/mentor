@@ -36,34 +36,34 @@ function trataCambio(valor, moeda) {
     let cambio = document.getElementById('cambio').value;
 
 
-    if (cambio == 'real') {
+    if (cambio == 'BRL') {
         //Transforma os valores para o real
 
-        if (moeda == 'dolar') {
+        if (moeda == 'USD') {
             return valor = parseFloat(valor) * dolar;
-        } else if (moeda == 'euro') {
+        } else if (moeda == 'EUR') {
             return valor = parseFloat(valor) * euro;
         } else {
             return valor = parseFloat(valor);
         }
 
-    } else if (cambio == 'dolar') {
+    } else if (cambio == 'USD') {
         //Transforma os valores para o dolar
 
-        if (moeda == 'real') {
+        if (moeda == 'BRL') {
             return valor = parseFloat(valor) / dolar;
-        } else if (moeda == 'euro') {
+        } else if (moeda == 'EUR') {
             return valor = (parseFloat(valor) / euro) * dolar;
         } else {
             return valor = parseFloat(valor);
         }
 
-    } else if (cambio == 'euro') {
+    } else if (cambio == 'EUR') {
         //Transforma os valores para o euro
 
-        if (moeda == 'real') {
+        if (moeda == 'BRL') {
             return valor = parseFloat(valor) / euro;
-        } else if (moeda == 'dolar') {
+        } else if (moeda == 'USD') {
             return valor = (parseFloat(valor) / dolar) * euro;
         } else {
             return valor = parseFloat(valor);
@@ -123,11 +123,11 @@ function calculaPatrimonio() {
         total += valor; // soma os valores após as tranformações;
     }
 
-    if (cambio == 'real') {
+    if (cambio == 'BRL') {
         simbolo = 'R$';
-    } else if (cambio == 'dolar') {
+    } else if (cambio == 'USD') {
         simbolo = 'US$';
-    } else if (cambio == 'euro') {
+    } else if (cambio == 'EUR') {
         simbolo = '€';
     }
 
